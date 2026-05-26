@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unit Converter</title>
+
+<script>
+
+function convert(type){
+
+let value = Number(document.getElementById("value").value);
+let result;
+
+if(type=="cm_m")
+result = value / 100;
+
+if(type=="m_cm")
+result = value * 100;
+
+if(type=="m_km")
+result = value / 1000;
+
+if(type=="km_m")
+result = value * 1000;
+
+document.getElementById("result").innerHTML = "Result: " + result;
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Unit Converter</h1>
+
+<input id="value" placeholder="Enter value">
+
+<br><br>
+
+<button onclick="convert('cm_m')">cm - metre</button>
+<button onclick="convert('m_cm')">metre - cm</button>
+<button onclick="convert('m_km')">metre - km</button>
+<button onclick="convert('km_m')">km - metre</button>
+
+<p id="result"></p>
+
+<br>
+
+<a href="tools.html">Back</a>
+
+</body>
+</html>

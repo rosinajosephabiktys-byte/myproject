@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zakat Calculator</title>
+
+<script>
+
+function calculateZakat(){
+
+let income = Number(document.getElementById("income").value);
+
+let zakat = income * 0.025;
+
+document.getElementById("result").innerHTML = "Zakat: RM " + zakat;
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Zakat Calculator</h1>
+
+<input id="income" placeholder="Enter Income">
+
+<br><br>
+
+<button onclick="calculateZakat()">Calculate Zakat</button>
+
+<p id="result"></p>
+
+<br>
+
+<a href="tools.html">Back</a>
+
+</body>
+</html>

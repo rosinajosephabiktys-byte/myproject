@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Exam Result Checking</title>
+</head>
+<body>
+<h1>Exam Result Checking</h1>
+<form method="post">
+Enter your mark:
+<input type="submit"
+name="submitButtton"
+value="Submit">
+  </form>
+<?php
+
+if(isSet($_POST["submitButton"])){
+if($_POST["mark"]>=40)
+     {
+	 echo"<b>Congratulation.You PASSED</b>";
+	 }
+	 else
+	 {
+	 echo"<script>alert('Sorry you FAILED.Try again.')</script>";
+	 }
+	}
+?>
+</body>
+</html>
